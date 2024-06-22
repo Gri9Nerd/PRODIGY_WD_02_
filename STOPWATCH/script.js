@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         hrs++;
       }
   
-      // Format the time to display it properly
+    
       let formattedTime = `${hrs.toString().padStart(2, '0')}:${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}.${ms.toString().padStart(2, '0')}`;
       
       stopwatchDuration.innerHTML = formattedTime;
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       reset.style.display = "none";
       lap.style.display = "inline-block";
   
-      timeinterval = setInterval(displayTime, 10); // Update display every 10 milliseconds
+      timeinterval = setInterval(displayTime, 10); 
     });
   
     stopp.addEventListener("click", () => {
@@ -44,19 +44,19 @@ document.addEventListener("DOMContentLoaded", function () {
       reset.style.display = "inline-block";
       lap.style.display = "none";
   
-      clearInterval(timeinterval); // Stop the stopwatch
+      clearInterval(timeinterval); 
     });
   
     reset.addEventListener("click", () => {
-      clearInterval(timeinterval); // Stop the stopwatch
+      clearInterval(timeinterval); 
       hrs = 0;
       min = 0;
       sec = 0;
       ms = 0;
       lapCounter = 0;
-      stopwatchDuration.innerHTML = "00:00:00.00"; // Reset display
+      stopwatchDuration.innerHTML = "00:00:00.00"; 
   
-      // Clear laps
+      
       lapsList.innerHTML = "";
     });
   
